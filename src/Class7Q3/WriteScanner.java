@@ -1,4 +1,4 @@
-package class7;
+package Class7Q3;
 
 import java.io.IOException;
 import java.util.Scanner;
