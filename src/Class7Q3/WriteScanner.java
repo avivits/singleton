@@ -5,27 +5,34 @@ import java.util.Scanner;
 
 public class WriteScanner {
 
-    String name ;
-    String age ;
-    String address;
-    String phone ;
+//   String name ;
+//    String age ;
+//    String address;
+//    String phone ;
 
-    //public static void main(String[] args) throws IOException {
-public WriteScanner(){
-        Scanner userName = new Scanner(System.in);
-        System.out.println("enter name");
-        Scanner userAge = new Scanner(System.in);
-        System.out.println("enter age");
-        Scanner userAddress = new Scanner(System.in);
-        System.out.println("enter address");
-        Scanner userPhone = new Scanner(System.in);
-        System.out.println("enter phone number");
-        try{
-             name = userName.next();
-             age = userAge.next();
-             address = userAddress.next();
-             phone = userPhone.next();
-          //  System.out.println(phone);
-        }catch (Exception e){e.printStackTrace();}
+    public static void main(String[] args) throws IOException{
+
+        try {
+            MySingleton2 x = MySingleton2.getInstance();
+
+            Scanner userName = new Scanner(System.in);
+            System.out.println("enter name");
+            x.getToWrite(userName.next());
+
+            Scanner userAge = new Scanner(System.in);
+            System.out.println("enter age");
+            x.getToWrite(userAge.next());
+
+            Scanner userAddress = new Scanner(System.in);
+            System.out.println("enter address");
+            x.getToWrite(userAddress.next());
+
+            Scanner userPhone = new Scanner(System.in);
+            System.out.println("enter phone");
+            x.getToWrite(userPhone.next());
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
